@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Number
+      let decimal: number = 6;
+      let hex: number = 0xf00d;
+      let binary: number = 0b1010;
+      let octal: number = 0o744;
+
+      //String
+      let person: string = "Mike";
+      let age: number = 37;
+      let sentence: string = `Oh, ${person} is ${age} years old.`;
+
+      //Array
+      let list: number[] = [1, 2, 3];
+
+      //Tuple
+      let x: [string, number]; //Array中包含不同型別的變數用Tuple
+      x = ["hello", 10]; //ok
+      x = [10, "hello"]; //Error
+      x[3] = true; //Error 往後的變數只能是一開始設定的string或number
+
+      //宣告參數型別
+      function greeter(person: string) {
+        return "Hello, " + person;
+      }
+    </script>
+  </body>
+</html>

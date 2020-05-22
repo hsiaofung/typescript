@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      interface Person {
+        firstName: string;
+        lastName: string;
+      }
+
+      function greeter(person: Person) {
+        return "Hello, " + person.firstName + " " + persion.lastName;
+      }
+
+      var user = { firstName: "Tiger", lastName: "Liu" };
+      console.log(greeter(user));
+
+      //interface可以用來強制類別符合約束
+      interface Shape {
+        area(): number;
+      }
+
+      class Circle implements Shape {
+        radius: number;
+        constructor(radius: number) {
+          this.radius = radius;
+        }
+        area(): number {
+          return this.radius * this.radius * 3.1425;
+        }
+      }
+
+      //interface也可以繼承其他的interface
+      interface Shape {
+        area(): number;
+      }
+
+      interface Color {
+        RGB: string;
+      }
+
+      interface Thing extends Color, Shape {}
+    </script>
+  </body>
+</html>
